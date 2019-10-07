@@ -9,9 +9,8 @@ public class Menu {
 		System.out.println("1 - Inserir cliente");
 		System.out.println("2 - Listar cliente");
 		System.out.println("3 - Re-agendar revisão");
-		System.out.println("5 - Cancelar a revisão");
-		System.out.println("6 - Relatório de serviços feitos");
-		System.out.println("7 - Excluir cliente");
+		System.out.println("4 - Cancelar a revisão");
+		System.out.println("5 - Excluir cliente");
 		System.out.println("0 - Sair");
 	}
 }

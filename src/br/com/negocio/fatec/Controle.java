@@ -26,22 +26,20 @@ public class Controle {
 		return t;
 	}
 	
-	public Agenda carregar() throws Exception{
-		FileInputStream entrada = new FileInputStream("agenda.txt");
-		ObjectInputStream leitor = new ObjectInputStream(entrada);
-		Object ob = leitor.readObject();
+	public Agenda carregar() throws Exception {
+		FileInputStream input = new FileInputStream("agenda.txt");
+		ObjectInputStream reader = new ObjectInputStream(input);
+		Object ob = reader.readObject();
 		Agenda ag = (Agenda) ob;
-		leitor.close();
-		
+		reader.close();
 		return ag;
 	}
 	
-	public void salvar(Agenda ag) throws Exception{
-		FileOutputStream saida = new FileOutputStream("agenda.txt");
-		ObjectOutputStream escritor = new ObjectOutputStream(saida);
-		escritor.writeObject(ag);
-		escritor.close();
-		
+	public void salvar(Agenda ag) throws Exception {
+		FileOutputStream output = new FileOutputStream("agenda.txt");
+		ObjectOutputStream wr = new ObjectOutputStream(output);
+		wr.writeObject(ag);
+		wr.close();
 	}
 	
 //	public void carregar(Agenda ag) throws Exception {

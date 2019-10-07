@@ -9,7 +9,12 @@ public class App {
 		Menu neymar = new Menu();
 		Agenda ag = new Agenda();
 		Controle c = new Controle();
-		//c.carregar(ag);
+		try {
+			ag = c.carregar();
+		}
+		catch(Exception e) {
+			ag = new Agenda();
+		}
 		neymar.boasVindas();
 		int opcao = 100;
 		while(opcao != 0) {

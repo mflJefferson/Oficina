@@ -1,9 +1,11 @@
 package br.com.modelo.fatec;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Cliente {
+@SuppressWarnings("serial")
+public class Cliente implements Serializable {
 	protected String nome;
 	protected String telefone;
 	protected String endereco;

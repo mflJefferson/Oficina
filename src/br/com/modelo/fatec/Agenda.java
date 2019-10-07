@@ -1,5 +1,6 @@
 package br.com.modelo.fatec;
 
+import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -10,11 +11,12 @@ import java.util.function.Predicate;
 
 import br.com.negocio.fatec.Controle;
 
-public class Agenda {
+@SuppressWarnings("serial")
+public class Agenda implements Serializable {
 	public List<Cliente> clientes = new ArrayList<Cliente>();
 	String padrao = "yyyy-MM-dd";
-	SimpleDateFormat sdf = new SimpleDateFormat(padrao);
-	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy MM dd");
+	transient SimpleDateFormat sdf = new SimpleDateFormat(padrao);
+	transient DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy MM dd");
 	
 	
 	public void inserirClientes() throws ParseException {
